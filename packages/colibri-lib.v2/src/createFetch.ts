@@ -29,10 +29,10 @@ function CustomFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Resp
                 const matched = maybeMatching(response.url, match_url, filter_type);
                 if (!matched) return // 退出当前循环
                 // 修改响应
-                txt = typeof override === "string" ? override : JSON.stringify(override);
+                // txt = typeof override === "string" ? override : JSON.stringify(override);
                 // 修改状态码
-                status = +statusCode
-                statusText = statusCode
+                // status = +statusCode
+                // statusText = statusCode
                 // 通知
                 notice("fetch", response.url, match_url, fetchMethod || "")
             }

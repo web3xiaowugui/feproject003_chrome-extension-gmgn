@@ -62,7 +62,7 @@ initStorage().then(() => {
     window.addEventListener(
         Notice.TO_CONTENT,
         function (event) {
-            console.log(event.detail);
+            // console.log(event.detail);
             noticeBackgroundByContent(NoticeKey.HIT_RATE, event.detail);
         },
         false
