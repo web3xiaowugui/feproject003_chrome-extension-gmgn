@@ -34,7 +34,12 @@ function CustomFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Resp
                 // status = +statusCode
                 // statusText = statusCode
                 // 通知
-                notice("fetch", response.url, match_url, fetchMethod || "")
+                const contentType = response.headers.get("Content-Type");
+                if (contentType === "application/json; charset=utf-8") {
+                    notice("fetch", response.url, match_url, fetchMethod || "")
+                } else {
+                    console.log("not json:", contentType)
+                }
             }
         });
 

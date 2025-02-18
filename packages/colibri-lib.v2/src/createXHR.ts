@@ -66,8 +66,14 @@ class CustomXHR extends XMLHttpRequest {
                 // this.statusText = statusCode
                 // 通知
                 if (!this.message_once_lock) {
-                    notice("xhr", this.responseURL, match_url, this.method);
-                    this.message_once_lock = true;
+                    // application/json; charset=utf-8
+                    let contentType = this.getResponseHeader("Content-Type");
+                    if (contentType === "application/json; charset=utf-8") {
+                        notice("xhr", this.responseURL, match_url, this.method);
+                        this.message_once_lock = true;
+                    } else {
+                        console.log("not json:", contentType)
+                    }
                 }
             }
         });
