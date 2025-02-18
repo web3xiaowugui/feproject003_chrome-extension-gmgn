@@ -1,0 +1,16 @@
+# Logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+
+dist
+
+node_modules/
+.DS_Store
+
+lib
+build
+*.zip

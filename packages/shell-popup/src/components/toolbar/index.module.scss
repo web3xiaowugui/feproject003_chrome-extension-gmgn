@@ -1,0 +1,80 @@
+// px3 pt3 color-neutral-500 bg-white py-3 shadow-sm
+.spaceContainer {
+  width: calc(var(--ajax-proxy-v3-global-witdh) - 1.5rem);
+  height: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.75rem;
+  color: #737373;
+  // background-color: #fff;
+  background-color: var(--ajax-proxy-v3-global-theme-color);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  cursor: pointer;
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.iconDisabled {
+  cursor: not-allowed;
+  color: #c0c4cc;
+  &:active {
+    transform: none;
+  }
+}
+
+.github {
+  margin-left: 1.25rem;
+  color: #737373;
+}
+
+.themeIcon {
+  cursor: pointer;
+  color: #7d828b;
+}
+
+.drawerContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.link {
+  margin-left: 20px;
+  // 取消a标签默认样式
+  text-decoration: none;
+  color: #737373;
+  font-size: 13px;
+  &:hover {
+    color: #7d828b;
+  }
+}
+
+.repairContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .icon {
+    width: 42px;
+    margin: 0 5px;
+    font-size: 13px;
+  }
+  .label {
+    font-size: 15px;
+    color: var(--n-label-text-color);
+    width: 80%;
+    float: left;
+    transition: color 0.3s var(--n-bezier);
+  }
+  .repairLabel {
+    color: #63e6be;
+    font-size: 13px;
+  }
+}

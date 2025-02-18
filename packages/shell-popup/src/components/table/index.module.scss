@@ -1,0 +1,66 @@
+.tableContainer {
+  // background-color: #f3f4f6;
+  background-color: var(--ajax-proxy-v3-table-theme-color);
+  transition: 0.35s var(--cubic-bezier-ease-in-out);
+  margin-top: 50px;
+}
+
+.emptyContainer {
+  padding-top: 150px;
+  height: calc(var(--ajax-proxy-v3-global-height) - 220px);
+}
+
+.rowContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--ajax-proxy-v3-border-theme-color);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.rowLabel {
+  font-size: 0.75rem;
+  color: #8e8e93;
+  padding-left: 33px;
+}
+
+.rowInput {
+  flex: 1;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+.regexIcon {
+  cursor: pointer;
+}
+
+.regexActive {
+  fill: #f0a020;
+}
+
+.rowMethodTag {
+  width: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.methodTag {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.options {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  color: #303133;
+}
+.rowInfoContainer {
+  padding-left: 32px;
+}
