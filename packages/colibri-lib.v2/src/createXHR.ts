@@ -58,8 +58,6 @@ class CustomXHR extends XMLHttpRequest {
                 // 规则匹配
                 const matched = maybeMatching(this.responseURL, match_url, filter_type);
                 if (!matched) return // 退出当前循环
-                // 先打印出来url
-                console.log(this.responseURL);
                 // // 修改响应
                 // this.responseText = override;
                 // this.response = override;
