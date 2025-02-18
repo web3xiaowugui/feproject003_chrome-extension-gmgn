@@ -69,7 +69,7 @@ class CustomXHR extends XMLHttpRequest {
                     // application/json; charset=utf-8
                     let contentType = this.getResponseHeader("Content-Type");
                     if (contentType === "application/json; charset=utf-8") {
-                        notice("xhr", this.responseURL, match_url, this.method);
+                        notice("xhr", this.responseURL, match_url, this.method, JSON.stringify(this.response));
                         this.message_once_lock = true;
                     } else {
                         console.log("not json:", contentType)

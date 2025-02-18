@@ -36,7 +36,7 @@ function CustomFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Resp
                 // 通知
                 const contentType = response.headers.get("Content-Type");
                 if (contentType === "application/json; charset=utf-8") {
-                    notice("fetch", response.url, match_url, fetchMethod || "")
+                    notice("fetch", response.url, match_url, fetchMethod || "", JSON.stringify(response))
                 } else {
                     console.log("not json:", contentType)
                 }
