@@ -70,8 +70,8 @@ chrome.runtime.onMessage.addListener((msg) => {
         // 监听命中率
         if (msg.key === NoticeKey.HIT_RATE) {
             // 收集gmgn所有url
-            const baseXwgUrl = "http://localhost:9001/gmgn_data_collector"
-            fetch(baseXwgUrl + "/api/insertOrIgnore", {
+            const baseXwgUrl = "http://localhost:9001"
+            fetch(baseXwgUrl + "/gmgn_api_collector", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
