@@ -1,10 +1,15 @@
+# My
+```text
+# 安装依赖
+pnpm install
+
+# 编译和打包，在 git bash 中执行（因为用到的 rm 命名）
+run-s build:all pkg && node ./extension-zips.js
+```
+
 # Colibri
 
 用来修改 Ajax 的响应数据的 Chrome 浏览器插件
-
-![colibri_interceptor](./media/colibri_interceptor.png)
-
-![operation](./media/operation.gif)
 
 参考了很多优秀的开源项目：[devtools](https://github.com/vuejs/devtools)、[ajax-hook](https://github.com/wendux/ajax-hook) 等，UI 风格参考 tweak。
 
