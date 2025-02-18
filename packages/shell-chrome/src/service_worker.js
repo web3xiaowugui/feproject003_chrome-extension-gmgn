@@ -22,6 +22,10 @@ function getStore(key, defaultValue = null) {
     });
 }
 
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+});
+
 // 接收content 传来的信息
 chrome.runtime.onMessage.addListener((msg) => {
     if (msg.type === Notice.TYPE && msg.to === Notice.TO_BACKGROUND) {

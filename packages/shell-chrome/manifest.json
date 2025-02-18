@@ -21,7 +21,10 @@
     "128": "icons/128.png"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "sidePanel",
+    "activeTab",
+    "scripting"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -30,9 +33,10 @@
     "service_worker": "service_worker.js"
   },
   "action": {
-    "default_title": "Colibri",
-    "default_popup": "popups/index.html",
-    "default_icon": "icons/128g.png"
+    "default_title": "Click to open panel"
+  },
+  "side_panel": {
+    "default_path": "popups/index.html"
   },
   "web_accessible_resources": [
     {
