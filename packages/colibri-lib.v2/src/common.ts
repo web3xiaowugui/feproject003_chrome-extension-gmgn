@@ -20,10 +20,10 @@ export function maybeMatching(url: string, match: string, type: IFilterType = "n
 }
 
 // 通知到 content 命中统计
-export function notice(url: string, match_url: string, method: string) {
+export function notice(client: String, url: string, match_url: string, method: string) {
     window.dispatchEvent(
         new CustomEvent(Notice.TO_CONTENT, {
-            detail: { url, match_url, method },
+            detail: { client, url, match_url, method },
         })
     );
 }

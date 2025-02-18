@@ -34,7 +34,7 @@ function CustomFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Resp
                 status = +statusCode
                 statusText = statusCode
                 // 通知
-                notice(response.url, match_url, fetchMethod || "")
+                notice("fetch", response.url, match_url, fetchMethod || "")
             }
         });
 
