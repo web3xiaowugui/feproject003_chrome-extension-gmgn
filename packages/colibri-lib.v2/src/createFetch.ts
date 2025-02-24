@@ -37,7 +37,8 @@ function CustomFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Resp
                 const contentType = response.headers.get("Content-Type");
                 if (contentType === "application/json; charset=utf-8") {
                     response.clone().text().then((body) => {
-                        notice("fetch", response.url, match_url, fetchMethod || "", body)
+                        const result = JSON.parse(body);
+                        notice("fetch", response.url, match_url, fetchMethod || "", JSON.stringify(result.data))
                     })
                 } else {
                     console.log("not json:", contentType)
